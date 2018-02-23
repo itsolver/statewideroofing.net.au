@@ -1,0 +1,14 @@
+<section class="hero">
+    <div class="wrapper">
+      <h1>{{ include.heading }}</h1>
+      <p class="subtitle">{{ include.subtitle }}</p>
+      <div class="hero-cta">
+          <a class="button light border light-hover" href="/contact_us">Get a quote</a>
+      </div>
+      {% if include.video != "" %}
+      <div class="landing-video">
+        {% include video.html video = include.video %}
+      </div>
+      {% endif %}
+    </div>
+  </section>

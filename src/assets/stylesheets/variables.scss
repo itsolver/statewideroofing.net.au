@@ -1,0 +1,93 @@
+// Brand colour palette
+$light-shade: #F2F4F4;
+$light-accent: #739D72;
+$brand-color: #9FA7A8;
+$dark-accent: #70608B;
+$dark-shade: #342F5A;
+
+// Colours
+$footer-color: #E0E0E0;
+$cards-background-color: #f6f7fc;
+$cta-background-color: #757575;
+$testimonial-background-color: #f8faff;
+$text-color: #545454;
+$form-icon-color: #828a9b;
+$placeholder-color: #b4b8c1;
+$plain-border-color: #e7e7e7;
+$light-hover-color: #e8f2fc;
+
+
+$middle-gradient-color: mix($brand-color, $dark-accent, 95%);
+$font-family: 'Open Sans', sans-serif;
+$font-display-family: 'Source Sans Pro', sans-serif;
+
+// Breakpoints
+$tablet: '(min-width: 450px)';
+$mid-point: '(min-width: 620px)';
+$desktop: '(min-width: 768px)';
+$large-desktop:  '(min-width: 1000px)';
+
+// Sizes
+$large-wrapper-width: 1200px;
+$wrapper-width: 1000px;
+$post-width: 700px;
+$wrapper-horizontal-padding: 20px;
+$overhang: ($post-width - ($wrapper-horizontal-padding * 2)) * 0.05;
+$section-padding-mobile: 30px;
+$section-padding-tablet: 50px;
+$section-padding: 65px;
+$half-space: $section-padding / 2;
+$quarter-space: $half-space / 2;
+$octa-space: $quarter-space / 2;
+$footer-links-width: 300px;
+
+$mobile-card-padding: 20px;
+$card-padding: 30px;
+$big-card-padding: 40px;
+
+// Font sizes
+$font-smallest: 0.7rem;
+$font-smaller: 0.8rem;
+$font-small: 0.9rem;
+$font-normal: 1rem;
+$font-size-content: 1.15rem;
+
+// Other
+$transition-duration: 0.15s;
+$text-opacity: 0.75;
+$light-text-opacity: 0.4;
+$border-radius: 2px;
+$uppercase-letter-spacing: 1px;
+
+// Breaks
+$desktop-min: 930px;
+$tablet-min: 500px;
+$overhang-min: 940px;
+
+// Shadows
+$large-box-shadow: 0 10px 50px 0 rgba(0, 20, 180, 0.1);
+$medium-box-shadow: 0 5px 30px 0 rgba(0, 20, 180, 0.075);
+$medium-offset-box-shadow: 5px 5px 30px 0 rgba(0, 20, 180, 0.075);
+$outline-box-shadow: 0 0 1px 1px rgba(0, 20, 180, 0.03);
+
+
+// Video
+$landing-video-height: 612px;
+$landing-image-color-light: rgba(0, 0, 0, 0.065);
+$landing-image-color-dark: rgba(120, 120, 120, 0.5);
+
+.vertical-flow {
+	margin: 0 0 1.5rem 0;
+}
+
+@mixin hero-overhang($half-height) {
+	margin: -($section-padding-mobile + $half-height) 0 $section-padding-mobile 0;
+
+	@media only screen and (min-width: $tablet-min) {
+		margin: -($section-padding-tablet + $half-height) 0 $section-padding-tablet 0;
+	}
+
+	@media only screen and (min-width: $desktop-min) {
+		margin: -($section-padding + $half-height) 0 $section-padding 0;
+	}
+}

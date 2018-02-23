@@ -1,0 +1,109 @@
+# ----
+# Site
+source                   : ".tmp/src"
+destination              : ".tmp/dist"
+
+title: "Statewide Roofing"
+url: "https://www.statewideroofing.net.au"
+baseurl: ""
+environment: "production"
+repository: "https://github.com/itsolver/statewideroofing.net.au"
+timezone: "Australia/Brisbane"
+google_analytics_key: "UA-114652588-1"
+disqus_shortname: ""
+icon_ready: true
+twitter:
+  username: ""
+future: false # Publish on schedule future dated posts https://stackoverflow.com/a/5013966
+
+# Business profile
+BSA: "111 8722"
+ABN: "28 106 505 533"
+email: "info@statewideroofing.net.au"
+phone: "1300 784 231"
+fax: "1300 784 235"
+mailing_address: P.O. Box 7456, Loganholme QLD 4129
+physical_address: 21 / 8 Riverland Dr, Loganholme QLD 4129
+operating_hours: Monday - Friday, 7am - 2pm
+
+# Let search engines discover this site quicker
+google_site_verification : ""
+bing_site_verification   : ""
+alexa_site_verification  : ""
+yandex_site_verification : ""
+
+# Values for the jekyll-seo-tag gem (https://github.com/jekyll/jekyll-seo-tag)
+logo: "/assets/images/statewide-roofing-logo.png"
+description: "The metal roofing specialists."
+facebook:
+  publisher: ""
+  admins: ""
+author:
+  picture: ""
+  twitter: ""
+social:
+  name: ""
+  links:
+
+# -----
+# Build
+
+permalink: "pretty"
+defaults:
+  - scope:
+      path: ""
+    values:
+      header_class: "plain"
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+
+collections:
+  case_studies:
+    output: false
+    permalink: /case-studies/:name/
+
+exclude:
+- .asset-cache
+- .bundle
+- .jekyll-assets-cache
+- .sass-cache
+- "*.sublime-project"
+- "*.sublime-workspace"
+- Capfile
+- config
+- Gemfile
+- Gemfile.lock
+- Gruntfile.js
+- gulpfile.js
+- log
+- node_modules
+- package.json
+- Rakefile
+- README
+- tmp
+- vendor/bundle/
+- vendor/cache/
+- vendor/gems/
+- vendor/ruby/
+
+plugins:
+  - jekyll-sitemap
+  - jekyll-seo-tag
+  - jekyll-feed
+
+# -----------
+# CloudCannon
+
+social_icons:
+  - Facebook
+  - Google-Plus
+  - Instagram
+  - LinkedIn
+  - Pinterest
+  - Tumblr
+  - Twitter
+  - YouTube
+  - RSS

@@ -1,0 +1,12 @@
+---
+layout: default
+---
+
+<header class="{{ page.header_class }}">
+	{% include navigation/top.html %}
+	{% include components/hero/main.html image="" heading=page.heading subtitle=page.subtitle button_alt=page.hero_cta_text video="" %}
+</header>
+
+{{ content }}
+
+{% include components/cta/main.html text="Your satisfaction is paramount to us" button="Contact us" %}

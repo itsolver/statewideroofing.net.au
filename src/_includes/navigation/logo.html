@@ -1,0 +1,7 @@
+<div class="logo">
+  <a href="{% if site.environment == 'production' %}{{site.url}}{% else %}/{% endif %}">
+    {% if site.logo contains "svg" %}{% include svgs/logo.html logo="main" %}{% endif %}
+    {% if site.logo contains "png" or site.logo contains "jpg" %}<img src="{{ site.logo }}" alt="{{ site.title }}">{% endif %}
+    <span>{{site.title}}</span>
+  </a>
+</div>

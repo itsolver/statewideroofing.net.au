@@ -1,0 +1,53 @@
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans|Source+Sans+Pro">
+  <link rel="manifest" href="/manifest.json">
+  <link rel="apple-touch-icon" sizes="180x180" href="/the_favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" href="/the_favicon/favicon-32x32.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="/the_favicon/favicon-16x16.png" sizes="16x16">
+  <link rel="mask-icon" href="/the_favicon/safari-pinned-tab.svg" color="#4182e4">
+  <link rel="shortcut icon" href="/the_favicon/favicon.ico">
+  <meta name="apple-mobile-web-app-title" content="IT Solver">
+  <meta name="application-name" content="IT Solver">
+  <meta name="msapplication-config" content="/the_favicon/browserconfig.xml">
+  <meta name="theme-color" content="#4182e4">{% seo %} {% feed_meta %}
+
+
+{% assign style_css = site.data.css-manifest['main.css'] | default: 'main.css' | prepend: 'assets/stylesheets/' | relative_url %}
+{% if page.header_class == "landing" and site.environment == 'production' %}
+<!-- Inline navigation css for landing page that's missing from critical inlined css. Load remaining CSS for non-landing pages.  -->
+<style>.nav-open .nav-bar.wrapper .main, .nav-open .nav-bar.wrapper .right {display: block;}</style>
+{% else %}
+<link rel="stylesheet" href="{{ style_css }}">
+{% endif %}
+
+<!-- site verifications -->
+{% if site.google_verification %}
+<meta name="google-verification" content="{{ site.google_site_verification }}">
+{% endif %}
+{% if site.bing_site_verification %}
+<meta name="msvalidate.01" content="{{ site.bing_site_verification }}">
+{% endif %}
+{% if site.alexa_site_verification %}
+<meta name="alexaVerifyID" content="{{ site.alexa_site_verification }}">
+{% endif %}
+{% if site.yandex_site_verification %}
+<meta name="yandex-verification" content="{{ site.yandex_site_verification }}">
+{% endif %}
+<!-- / site verifications -->
+
+{% if site.environment == 'production' and site.google_analytics_key != '' %}
+  <script>
+    if(navigator.userAgent.indexOf("Speed Insights") == -1) {
+      (function (e, a, t, n, c, o, s) {
+          e.GoogleAnalyticsObject = c, e[c] = e[c] || function () {
+                  (e[c].q = e[c].q || []).push(arguments)
+              }, e[c].l = 1 * new Date, o = a.createElement(t), s = a.getElementsByTagName(t)[0], o.async = 1, o.src =
+              n, s.parentNode.insertBefore(o, s)
+      })(window, document, "script", "//www.google-analytics.com/analytics.js", "ga"), ga("create",
+          "{{ site.google_analytics_key }}", "auto"), ga("send", "pageview")
+    }
+  </script>
+{% endif %}
+</head>

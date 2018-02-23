@@ -1,0 +1,20 @@
+- links:
+  - header: Statewide Roofing
+  - name: Projects
+    link: /projects
+  - name: Capabilities
+    link: /capabilities
+  - name: Careers
+    link: /careers
+  - name: About Us
+    link: /about_us
+- links:
+  - header: Contact Us
+  - name: Email info@statewideroofing.net.au
+    link: mailto:info@statewideroofing.net.au
+    contact_icon: email
+  - name: Phone 1300 784 235
+    link: tel:+611300784231
+    contact_icon: phone
+  - name: Fax or Post
+    link: /contact_us

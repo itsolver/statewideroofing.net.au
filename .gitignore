@@ -1,0 +1,16 @@
+
+.asset-cache
+.bundle
+.DS_Store
+.firebaserc
+.jekyll-metadata
+.sass-cache
+.vscode
+.tmp
+_assets
+_site
+_asset_bundler_cache
+dist
+node_modules
+npm-debug.log*
+have-i-been-pwned-verification.txt

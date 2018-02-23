@@ -1,115 +1,17 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
-<html>
-<head>
-<link rel="shortcut icon" href="favicon.ico">
-<link rel="icon" type="image/gif" href="animated_favicon1.gif">
+---
+layout: main-landing
+title: Statewide Roofing - Specialist in Commercial and Industrial Roofing
+heading: Welcome to Statewide Roofing
+subtitle: Specialist in commercial and industrial roofing
+description: Statewide Roofing is an energetic Queensland company that prides itself on high quality. The standards apply to all we do, from customer service to the tidy and timely finish of projects, however large or small. Experience the best you can ask for from the moment you make first contact. You are the reason our business exists. Your satisfaction is paramount to us.
+hero_cta_text: Get a quote
+cta_text: Let's talk
+cta_url: /contact_us
+video:
+header_class: "landing"
+---
 
-<meta http-equiv="content-type" content="text/html; charset=UTF-8">
-<title> Statewide Roofing - Specialist's in Commercial and Industrial Roofing </title>
-	<link href="style.css" rel="stylesheet" type="text/css">
-<style type="text/css">
-<!--
-.txt2 table tr .ins p {
-	font-size: 12px;
-}
-.txt2 table tr .ins p {
-	font-size: 16px;
-}
--->
-</style>
-</head>
-<body>
-<table width="100%" >
-<!--top-->
-<tr>
-	<td style="width:100%; height:349px;"><table  style="width:100%; height:100%">
-		<tr>
-			<td style="width:50%;"><table style="width:100%;">
-				<tr><td class="top1"></td></tr>
-				<tr><td class="top2"></td></tr>
-				<tr><td class="rez1"></td></tr>
-			</table></td>
-			<td style="width:766px;">
-			<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000"
-           codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,19,0"
-           width="766" height="349">
-    <param name="movie" value="flash/header1.swf?button=0"> 
-    <param name="quality" value="high">
-    <param name="menu" value="false">
-    <!--[if !IE]> <-->
-    <object data="flash/header1.swf?button=0"
-            width="766" height="349" type="application/x-shockwave-flash">
-     <param name="quality" value="high">
-     <param name="menu" value="false">
-     <param name="pluginurl" value="http://www.macromedia.com/go/getflashplayer">
-     FAIL (the browser should render some flash content, not this).
-    </object>
-    <!--> <![endif]-->
-   </object></td>
-			<td style="width:50%;"><table style="width:100%;">
-				<tr><td class="top1"></td></tr>
-				<tr><td class="top2"></td></tr>
-				<tr><td class="rez1"></td></tr>
-			</table></td>
-		</tr>
-	</table></td>
-</tr>
-<!--content-->
-<tr>
-	<td style="width:100%; height:334px;"><table  style="width:100%; height:100%">
-		<tr>
-			<td style="width:50%; background:#CECCBD url(images/w2.jpg) top left repeat-x; height:100%;"><img alt="" src="images/spacer.gif" width="1" height="1"></td>
-			<td style="width:766px;"><table  style="width:766px; height:100%;">
-				<tr>
-					<td style="height:334px;"><table style="height:100%;">
-						<tr>
-							<!--center-->
-							<td style="width:766px; height:100%; background: #CECCBD url(images/w2.jpg) top left repeat-x;" class="txt2"><table style="margin:27px 0 11px 18px; width:729px;">
-								<tr><td align="center" style="height:27px;"><h1 align="center">&nbsp;</h1>
-							  <h1 align="center">Welcome to Statewide Roofing </h1>
-							  <p align="center">&nbsp;</p></td></tr>
-								<tr><td class="ins"><p><br>
-								  Statewide Roofing is an   energetic Queensland company that prides itself on high quality. The standards</p>
-							      <p> apply to all we do, from customer service to the tidy and timely finish of   projects, however large or small. </p>
-							      <p>Experience the best you can ask for from the   moment you make first contact. You are the reason our </p>
-							      <p>business exists. Your   satisfaction is paramount to us. <br> 
-							      </p>
-							      <p align="center"><img src="images/DSCF0064.jpg" width="702" height="174"></p>
-							      <p>&nbsp; </p>
-							      <p>A fine example of roof   craftsmanship by Statewide Roofing</p>
-<p>&nbsp;</p>
-<p><strong>Linfox</strong>, Acacia Ridge Queensland</p>
-                                  <p>Client: Ahrens Group</p>
-                                  <p>&nbsp;</p>
-                                  <p><br style="line-height:12px;">
-                                  </p>
-							      <p>&nbsp;</p></td></tr>
-							</table></td>
-						</tr>
-					</table></td>
-				</tr>
-			</table></td>
-			<td style="width:50%; background:#CECCBD url(images/w2.jpg) top left repeat-x; height:100%;"><img alt="" src="images/spacer.gif" width="1" height="1"></td>
-		</tr>
-	</table></td>
-</tr>
-<!--footer-->
-<tr>
-	<td style="width:100%;"><table style="width:100%; height:100%">
-		<tr>
-			<td style="width:50%;"><img alt="" src="images/spacer.gif" width="1" height="1"></td>
-			<td style="width:766px;"><table style="width:766px;">
-				<tr>
-				  <td class="end">
-					Copyright 2009 &copy; Playone Pty Ltd. All rights reserved<br>
-					<a href="#">Terms of use</a>  &nbsp;|&nbsp;  <a href="#">Privacy Policy</a>
-				</td></tr>
-			</table></td>
-			<td style="width:50%;"><img alt="" src="images/spacer.gif" width="1" height="1"></td>
-		</tr>
-	</table></td>
-</tr>
-</table>
-</body>
-</html>
-<!-- HUNTER by KOTSOFT "http://kotsoft.jino-net.ru/forum/" -->
+{% include components/landing-page/what.html %}
+
+{% assign case = site.case_studies | where: "name", "Linfox" | first %}
+{% include components/case-study/quote.html case=case %}

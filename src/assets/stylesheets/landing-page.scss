@@ -1,0 +1,150 @@
+ul.benefits {
+  -webkit-padding-start: 0;
+  padding-left: 0;
+  li {
+    padding-bottom: 10px;
+  }
+}
+
+@media #{$desktop} {
+	.flex {
+		@include flexbox;
+		flex-direction: row;
+
+		.text, .image {
+			-webkit-flex: 1;
+			flex: 1;
+		}
+
+		.benefits {
+			li {
+        list-style-type: none;
+			}
+		}
+
+		ul.benefits {
+			-webkit-padding-start: 0;
+			padding-left: 0;
+
+		}
+	}
+
+	.content section:nth-child(even) .flex {
+		flex-direction: row-reverse;
+	}
+}
+
+
+.hero {
+	text-align: center;
+
+	@media only screen and (min-width: $tablet-min) {
+		padding-bottom: 30px;
+	}
+
+	@media only screen and (min-width: $desktop-min) {
+		padding-bottom: 0;
+	}
+  .wrapper {
+    padding-bottom: 0;
+  }
+	.subtitle {
+		max-width: 400px;
+	}
+}
+
+.hero-cta {
+	padding: 40px 0;
+}
+
+
+.storage-provider-icons {
+	svg {
+		width: 35px;
+		height: 35px;
+		margin-right: 5px;
+	}
+}
+
+.landing-video {
+	border: 10px solid #fff;
+	border-radius: $border-radius;
+	line-height: 0;
+	overflow: hidden;
+	position: relative;
+	margin-bottom: -250px;
+	box-shadow: $large-box-shadow;
+	max-width: 940px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.landing-page-content {
+	overflow-x: hidden;
+	padding: 80px 0 20px 0;
+
+	@media only screen and (min-width: $tablet-min) {
+		padding-top: 170px;
+		padding-bottom: $section-padding-tablet;
+	}
+
+	@media only screen and (min-width: $desktop-min) {
+		padding-top: 200px;
+		padding-bottom: 0;
+	}
+}
+
+.landing-wrap {
+	.wrapper {
+		padding-top: $section-padding;
+		padding-bottom: $section-padding;
+	}
+
+	h2 {
+		margin-top: 0;
+	}
+
+	.landing-text {
+		max-width: 480px;
+	}
+
+	.landing-content {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-flow: column;
+
+		.landing-text {
+			flex: 1;
+		}
+
+		.landing-image {
+			flex: 1;
+
+			.screenshot {
+				background-size: 13%;
+				padding-top: 5.75%;
+				background-position: 2% 2%;
+			}
+		}
+	}
+
+	@media only screen and (min-width: $desktop-min) {
+		&:nth-child(even) {
+			.landing-text {
+				order: 2;
+			}
+
+			.landing-image {
+				margin-right: 0;
+				text-align: right;
+			}
+		}
+	}
+}
+
+@media only screen and (min-width: $desktop-min) {
+	.landing-wrap .landing-content {
+		flex-flow: row;
+	}
+}

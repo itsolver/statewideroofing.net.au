@@ -1,0 +1,42 @@
+language: ruby
+rvm:
+  - 2.2
+
+dist: trusty
+sudo: false
+
+branches:
+  only:
+    - master
+
+cache:
+  bundler: true
+  yarn: true
+  directories:
+    - node_modules # NPM packages
+
+env:
+  global:
+    - NOKOGIRI_USE_SYSTEM_LIBRARIES=true
+
+notifications:
+  email:
+    on_success: never
+    on_failure: change
+
+install:
+  - nvm install 9.5
+  - npm install -g gulp-cli
+
+script: travis_retry gulp build --prod
+
+## Learn about Travis-Firebase deployment and how to generate firebase token: https://docs.travis-ci.com/user/deployment/firebase/
+deploy:
+  provider: firebase
+  skip_cleanup: true
+  token:
+    secure: 1/gXv4_MWz4DUHzo05irUjoVBBHCqy5gbsXGrDj2adyejlgDSpM04k0Ag8oIEGdlx7
+  project: "statewideroofing-86d6c"
+
+after_deploy:
+  - gulp submit
