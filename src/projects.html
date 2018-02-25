@@ -36,9 +36,9 @@ permalink: /projects/
 {% if project.current == false %}
 {% if count == 0 %}<div class="row">{% endif %}
   <div class="half-width project-preview {{ align }}">
-    <h2>{{ project.title }}</h2>
     <a href="{{ site.url }}{{ site.baseurl }}/projects/{{ project.directory | remove: 'assets/images/projects/' }}">
       <img alt="{{ project.title }}" src="{{ site.url }}{{ site.baseurl }}/{% if project.picture_path %}{{ project.picture_path }}{% else %}{{ project.directory }}{% endif %}/{{ project.preview.thumbnail }}" />
+      <p class="project-caption">{{ project.title }}</p>
     </a>
   </div>
 {% if count == 1 %}</div>{% endif %}
