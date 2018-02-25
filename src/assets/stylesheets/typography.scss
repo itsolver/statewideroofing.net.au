@@ -146,3 +146,10 @@ input[type="submit"] {
 div.secondary-nav-bar nav.right a {
   font-size: $font-small;
 }
+
+h2.project {
+  font-size: 1.5em;
+  @media only screen and (min-width: $desktop-min) {
+  font-size: 1.6em;
+  }
+}

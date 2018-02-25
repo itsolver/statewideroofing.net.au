@@ -5,7 +5,9 @@
 <body>
     {{ content }}
     {% include navigation/footer.html %}
-    {% include serviceWorker.html %}
+    {% if site.environment == 'production' %}
+      {% include serviceWorker.html %}
+    {% endif %}
     <script>
         document.getElementById("open-nav").addEventListener("click", function (event) {
           event.preventDefault();
