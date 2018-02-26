@@ -69,21 +69,10 @@
 }
 
 footer {
-	padding: 50px 0 50px 0;
 	font-size: 1.1em;
 	position: relative;
 	background: $dark-shade;
 	color: $footer-color;
-
-	.copyright {
-		font-size: .8em;
-		margin: 0 auto;
-
-		@media #{$tablet} {
-			text-align: center;
-		}
-
-	}
 
 	&,
 	a, h2 {
@@ -99,5 +88,19 @@ footer {
 		@extend %flexbox;
 		@include flex-flow(wrap);
     margin: -10px -10px 10px -10px;
+  }
+
+  .legal-line {
+    border-top: 1px solid #e7e7e7;
+  }
+
+  .legal-line .wrapper {
+      padding-top: 22.5px;
+      padding-bottom: 22.5px;
+      max-width: 1000px;
+
+  }
+  p.legal {
+    margin: 0 0 0 20px;
   }
 }
