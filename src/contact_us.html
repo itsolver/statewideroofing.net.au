@@ -7,19 +7,19 @@ layout: info-page
 <div class="contact-box">
 	<div class="contact-details">
     {% if site.email %}
-    <h3 class="">Email</h3>
+    <h3 class="contact">Email</h3>
     <p>For all general enquiries, email <a href="mailto:{{ site.email }}">{{ site.email }}</a></p>
     {% endif %}
     {% if site.phone %}
-    <h3 class=" icon">Phone</h3>
+    <h3 class="contact">Phone</h3>
     <p><a  href="tel:{{ site.phone | prepend: site.phone-country-code | remove: " " }}">{{ site.phone }}</a></p>
     {% endif %}
     {% if site.fax %}
-    <h3 class=" icon">Fax</h3>
+    <h3 class="contact">Fax</h3>
     <p><a  href="tel:{{ site.fax | prepend: site.phone-country-code | remove: " " }}">{{ site.fax }}</a></p>
     {% endif %}
     {% if site.mailing-address %}
-		<h3 class="">Mailing address</h3>
+		<h3 class="contact">Mailing address</h3>
     <p>{{ site.mailing-address }}</p>
     {% endif %}
     {% if site.operating-hours %}
@@ -32,6 +32,6 @@ layout: info-page
  </div>
 </div>
 
-<h2  class="where">Where we operate</h2>
+<h2 class="where">Where we operate</h2>
 <div class="overlay" onClick="style.pointerEvents='none'"></div>
 <iframe class="map" src="{{ site.google-maps-embed }}" height="400" frameborder="0"></iframe>
