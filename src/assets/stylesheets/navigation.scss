@@ -13,16 +13,6 @@
 	}
 }
 
-header.landing,
-header.short {
-	text-align: center;
-
-	&,
-	a {
-		color: $cta-background-color;
-	}
-}
-
 header.plain  {
 	background: #fff;
 	border-bottom: 1px solid $plain-border-color;
@@ -57,7 +47,8 @@ nav.right > svg {
 	a {
 		text-decoration: none;
 		white-space: nowrap;
-		display: block;
+    display: block;
+    color: #545454;
 	}
 
 	.main,

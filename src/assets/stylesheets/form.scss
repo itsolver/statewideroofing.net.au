@@ -19,7 +19,7 @@ input[type="submit"] {
 	padding: 18px $half-space;
 	display: inline-block;
 	border-radius: $border-radius;
-	background: $brand-color;
+	background: $light-accent;
 	color: #fff;
 	border: 0;
 	transition: $transition-duration background-color ease, $transition-duration color ease;
@@ -27,7 +27,7 @@ input[type="submit"] {
 
 	&:hover,
 	&.light.dark-hover:hover {
-		background-color: $dark-accent;
+    background: $dark-accent;
 	}
 
 	&.keep-text-size {
@@ -82,14 +82,6 @@ input[type="submit"] {
     }
 	}
 
-	&.dark-blue {
-		background-color: $cta-background-color;
-
-		&:hover {
-			background: $brand-color;
-		}
-	}
-
 	&.shadow {
 		box-shadow: $large-box-shadow;
 	}
@@ -100,8 +92,7 @@ input[type="submit"] {
 		border: 1px solid $brand-color;
 
 		&:hover {
-      color: $brand-color;
-			background-color: #e8f2fc;
+      color: $dark-accent;
 		}
 	}
 }
