@@ -6,6 +6,10 @@ layout: info-page
 ---
 <div class="contact-box">
 	<div class="contact-details">
+    {% if site.email %}
+    <h3 class="">Email</h3>
+    <p>For all general enquiries, email <a href="mailto:{{ site.email }}">{{ site.email }}</a></p>
+    {% endif %}
     {% if site.phone %}
     <h3 class=" icon">Phone</h3>
     <p><a  href="tel:{{ site.phone | prepend: site.phone-country-code | remove: " " }}">{{ site.phone }}</a></p>
@@ -14,15 +18,10 @@ layout: info-page
     <h3 class=" icon">Fax</h3>
     <p><a  href="tel:{{ site.fax | prepend: site.phone-country-code | remove: " " }}">{{ site.fax }}</a></p>
     {% endif %}
-    {% if site.email %}
-		<h3 class="">Email</h3>
-    <p>For all general enquiries, email <a href="mailto:{{ site.email }}">{{ site.email }}</a></p>
-    {% endif %}
     {% if site.mailing-address %}
 		<h3 class="">Mailing address</h3>
     <p>{{ site.mailing-address }}</p>
     {% endif %}
-
     {% if site.operating-hours %}
     <h2 class="when">Operating hours</h3>
     <ul class="operating-hours">
