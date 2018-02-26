@@ -27,6 +27,7 @@ notifications:
 install:
   - nvm install 9.5
   - npm install -g gulp-cli
+  - yarn
 
 script: travis_retry gulp build --prod
 
