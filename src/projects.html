@@ -8,7 +8,7 @@ heading: Current Projects
 {% if project.current %}
 <li class="project-preview card">
   {% if project.directory %}<a href="{{ site.url }}{{ site.baseurl }}/projects/{{ project.directory | remove: 'assets/images/projects/' }}">{% endif %}
-    <img alt="{{ project.title }}" src="{{ site.url }}{{ site.baseurl }}/{% if project.picture_path %}{{ project.picture_path }}{% else %}{{ project.directory }}{% endif %}/{{ project.preview.thumbnail }}" />
+  {% if project.directory %}<img alt="{{ project.title }}" src="{{ site.url }}{{ site.baseurl }}/{% if project.picture_path %}{{ project.picture_path }}{% else %}{{ project.directory }}{% endif %}/{{ project.preview.thumbnail }}" />{% endif %}
   <p class="project-caption">{{ project.title }}</p>
   {% if project.directory %}</a>{% endif %}
 </li>
