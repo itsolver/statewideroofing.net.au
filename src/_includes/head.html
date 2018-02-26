@@ -17,7 +17,8 @@
 {% assign style_css = site.data.css-manifest['main.css'] | default: 'main.css' | prepend: 'assets/stylesheets/' | relative_url %}
 {% if page.header_class == "landing" and site.environment == 'production' %}
 <!-- Inline navigation css for landing page that's missing from critical inlined css. Load remaining CSS for non-landing pages.  -->
-<style>.nav-open .nav-bar.wrapper .main, .nav-open .nav-bar.wrapper .right {display: block;}</style>
+<style>.nav-open .nav-bar.wrapper .main, .nav-open .nav-bar.wrapper .right {display: block;}a.button:hover,
+	a.button.light.dark-hover:hover {background: #70608B;}</style>
 {% else %}
 <link rel="stylesheet" href="{{ style_css }}">
 {% endif %}
