@@ -48,3 +48,25 @@ html {
   position: static;
   color: #AAA;
 }
+
+.project-previews {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+li.project-preview {
+  background: $dark-shade;
+  list-style-type: none;
+  color: #fff;
+  flex: 1 1 300px;
+  p,
+  a {
+    color: #FFF;
+    margin: auto;
+  }
+}
+
+li.project-preview.previous {
+  background: $light-accent;
+}
