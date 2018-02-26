@@ -6,6 +6,25 @@
       "**/.*",
       "**/node_modules/**"
     ],
+    "headers": [ {
+      "source" : "**/*.@(eot|otf|ttf|ttc|woff|font.css)",
+      "headers" : [ {
+        "key" : "Access-Control-Allow-Origin",
+        "value" : "*"
+      } ]
+      }, {
+      "source" : "**/*.@(jpg|jpeg|gif|png|css|js|ico)",
+      "headers" : [ {
+        "key" : "Cache-Control",
+        "value" : "max-age=31536000"
+      } ]
+      }, {
+      "source" : "404.html",
+      "headers" : [ {
+        "key" : "Cache-Control",
+        "value" : "max-age=300"
+      } ]
+    } ],
     "cleanUrls": true,
     "trailingSlash": false
   }
