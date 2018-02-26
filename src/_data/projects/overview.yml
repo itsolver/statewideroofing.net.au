@@ -3,9 +3,9 @@
  current: true
  directory: "assets/images/projects/manly-west-state-school"
  preview:
-  filename: 1
-  original: 1.jpg
-  thumbnail: 1-thumbnail.jpg
+  filename: 3
+  original: 3.jpg
+  thumbnail: 3-thumbnail.jpg
 -
  title: "Spoil Enclosure - Kedron"
  current: true
@@ -19,25 +19,9 @@
  current: true
  directory: "assets/images/projects/airport-link-shed-bald-hills"
  preview:
-  filename: 1
-  original: 1.jpg
-  thumbnail: 1-thumbnail.jpg
--
- title: "Tingalpa State School"
- current: true
- directory:
- preview:
-  filename:
-  original:
-  thumbnail:
--
- title: "Wynnum State School"
- current: true
- directory:
- preview:
-  filename:
-  original:
-  thumbnail:
+  filename: 3
+  original: 3.jpg
+  thumbnail: 3-thumbnail.jpg
 -
  title: "Riverpoint Apartments - Stage 1"
  current: true
@@ -62,6 +46,22 @@
   filename: 1
   original: 1.jpg
   thumbnail: 1-thumbnail.jpg
+-
+ title: "Tingalpa State School"
+ current: true
+ directory:
+ preview:
+  filename:
+  original:
+  thumbnail:
+-
+ title: "Wynnum State School"
+ current: true
+ directory:
+ preview:
+  filename:
+  original:
+  thumbnail:
 -
  title: "Wondall Rd State School"
  current: true
@@ -135,14 +135,6 @@
   original:
   thumbnail:
 -
- title: "Pacific Hwy - Loganholme"
- current: false
- directory:
- preview:
-  filename:
-  original:
-  thumbnail:
--
  title: "Da Vinci Precint"
  current: false
  directory: "assets/images/projects/da-vinci-precinct"
@@ -158,6 +150,30 @@
   filename: 1
   original: 1.jpg
   thumbnail: 1-thumbnail.jpg
+-
+ title: "Greenbank State School"
+ current: false
+ directory: "assets/images/projects/greenbank-state-school"
+ preview:
+  filename: 1
+  original: 1.jpg
+  thumbnail: 1-thumbnail.jpg
+-
+ title: "Stretton College - Drewvale"
+ current: false
+ directory: "assets/images/projects/stretton-college-drewvale"
+ preview:
+  filename: 1
+  original: 1.jpg
+  thumbnail: 1-thumbnail.jpg
+-
+ title: "Pacific Hwy - Loganholme"
+ current: false
+ directory:
+ preview:
+  filename:
+  original:
+  thumbnail:
 -
  title: "Korean Presbyterian Church Kuraby"
  current: false
@@ -206,14 +222,7 @@
   filename:
   original:
   thumbnail:
--
- title: "Greenbank State School"
- current: false
- directory: "assets/images/projects/greenbank-state-school"
- preview:
-  filename: 1
-  original: 1.jpg
-  thumbnail: 1-thumbnail.jpg
+
 -
  title: "Yugumbir State School"
  current: false
@@ -294,14 +303,6 @@
   filename:
   original:
   thumbnail:
--
- title: "Stretton College - Drewvale"
- current: false
- directory: "assets/images/projects/stretton-college-drewvale"
- preview:
-  filename: 1
-  original: 1.jpg
-  thumbnail: 1-thumbnail.jpg
 -
  title: "Booster Pump Stations"
  current: false
