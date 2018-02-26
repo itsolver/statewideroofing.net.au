@@ -115,10 +115,6 @@ sup {
 	position: static !important;
 }
 
-ul {
-  list-style-type: none;
-}
-
 .subtitle {
   font-size: $font-size-content;
   line-height: 1.7rem;
@@ -152,4 +148,8 @@ h2.project {
   @media only screen and (min-width: $desktop-min) {
   font-size: 1.6em;
   }
+}
+
+footer p.legal {
+  font-size: $font-normal;
 }
