@@ -1,36 +1,38 @@
 ---
 title: Contact Us
+heading: Contact Us
 description: Thanks for reaching out.
 layout: info-page
 ---
 <div class="contact-box">
-	<div class="contact-help-centre">
-		<h1 class="">Looking for support?</h1>
-		<a class="button dark no-border dark-hover go-away" href="https://support.itsolver.net/">VISIT OUR HELP CENTRE</a>
-	</div>
-</div>
-<div class="contact-box">
 	<div class="contact-details">
-		<h2 class="what">More options</h2>
-		<h3 class=" icon">Call</h3>
-		<p><a  href="tel:+61731236000">07 3123 6000</a></p>
-		<p><a href="https://calendly.com/itsolver/20-minute-phone-call">Setup a call for later</a></p>
+    {% if site.phone %}
+    <h3 class=" icon">Phone</h3>
+    <p><a  href="tel:{{ site.phone | prepend: site.phone-country-code | remove: " " }}">{{ site.phone }}</a></p>
+    {% endif %}
+    {% if site.fax %}
+    <h3 class=" icon">Fax</h3>
+    <p><a  href="tel:{{ site.fax | prepend: site.phone-country-code | remove: " " }}">{{ site.fax }}</a></p>
+    {% endif %}
+    {% if site.email %}
 		<h3 class="">Email</h3>
-		<p>For all general enquiries, email <a href="mailto:support@itsolver.net">support@itsolver.net</a></p>
+    <p>For all general enquiries, email <a href="mailto:{{ site.email }}">{{ site.email }}</a></p>
+    {% endif %}
+    {% if site.mailing-address %}
+		<h3 class="">Mailing address</h3>
+    <p>{{ site.mailing-address }}</p>
+    {% endif %}
+
+    {% if site.operating-hours %}
     <h2 class="when">Operating hours</h3>
     <ul class="operating-hours">
-      <li class="days">Mon - Fri:</li>
-      <li class="hours">8.00 am - 6.00 pm</li>
+      <li class="days">{{ site.operating-days }}</li>
+      <li class="hours">{{ site.operating-hours }}</li>
     </ul>
-    <p>For urgent enquiries outside of business hours, email <a href="mailto:support@itsolver.net">support@itsolver.net</a>. This mailbox is monitored 24/7 and Angus will respond as soon as possible.</p>
-  </div>
+    {% endif %}
+ </div>
 </div>
-<div class="contact-box">
-	<div class="contact-details">
-		<h2  class="where">Where we operate</h2>
-			  <p>IT Solver is based in Redland Bay, servicing <a href="/service-area">businesses in the area and around the world</a> with computer support and services. IT Solver delivers time-savings, personalised strategy and expert service.</p>
-        <p>To carry-in equipment please call or email.</p>
-      </div>
-</div>
+
+<h2  class="where">Where we operate</h2>
 <div class="overlay" onClick="style.pointerEvents='none'"></div>
-<iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d226349.99095722762!2d153.21640464864808!3d-27.571242239201556!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b916510942d8acf%3A0xf831a7625f6a263f!2sIT+Solver!5e0!3m2!1sen!2sau!4v1490193241568" height="400" frameborder="0"></iframe>
+<iframe class="map" src="{{ site.google-maps-embed }}" height="400" frameborder="0"></iframe>
