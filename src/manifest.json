@@ -1,8 +1,5 @@
----
-
----
 {
-    "short_name": "{{ site.title }}",
+    "short_name": "{{ site.short-name }}",
     "name": "{{ site.title }} {{ site.description }}",
     "icons": [
         {
@@ -21,7 +18,7 @@
             "type": "image/png"
         }
     ],
-    "theme_color": $brand-color;
+    "theme_color": "#9FA7A8",
     "background_color": "#FFF",
     "display": "standalone",
     "start_url": "/"
