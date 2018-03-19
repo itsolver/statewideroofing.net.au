@@ -1,7 +1,7 @@
 // Service worker to give a Progressive Web App experience.
 // Credit to Matt Gaunt - https://developers.google.com/web/fundamentals/primers/service-workers/
 
-const CACHE_NAME = 'cache-v6';
+const CACHE_NAME = 'cache-v7';
 const urlsToCache = [
   "/sw.js",
   "/",
@@ -61,4 +61,22 @@ self.addEventListener('fetch', function(event) {
         );
       })
     );
+});
+
+// Update a service worker
+self.addEventListener('activate', function(event) {
+
+  var CACHE_NAME = ['pages-cache-v1', 'blog-posts-cache-v1'];
+
+  event.waitUntil(
+    caches.keys().then(function(cacheNames) {
+      return Promise.all(
+        cacheNames.map(function(cacheName) {
+          if (CACHE_NAME.indexOf(cacheName) === -1) {
+            return caches.delete(cacheName);
+          }
+        })
+      );
+    })
+  );
 });
