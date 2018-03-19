@@ -1,6 +1,6 @@
 {
-    "short_name": "{{ site.short-name }}",
-    "name": "{{ site.title }} {{ site.description }}",
+    "short_name": "Statewide Roofing",
+    "name": "Statewide Roofing",
     "icons": [
         {
             "src": "/the_favicon/android-chrome-192x192.png",
