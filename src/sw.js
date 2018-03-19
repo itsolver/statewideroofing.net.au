@@ -65,9 +65,6 @@ self.addEventListener('fetch', function(event) {
 
 // Update a service worker
 self.addEventListener('activate', function(event) {
-
-  var CACHE_NAME = ['pages-cache-v1', 'blog-posts-cache-v1'];
-
   event.waitUntil(
     caches.keys().then(function(cacheNames) {
       return Promise.all(
