@@ -38,7 +38,7 @@ nav.right > svg {
   fill: currentColor;
 }
 .nav-bar.wrapper {
-	padding-top: 20px;
+	padding-top: 0;
 	padding-bottom: 20px;
 	.logo a {
 		display: inline-block;
@@ -204,4 +204,9 @@ div.secondary-nav-bar{
     }
   }
 
+}
+
+.licence-bar {
+	line-height: 30px;
+	text-align: right;
 }
