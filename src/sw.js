@@ -1,7 +1,7 @@
 // Service worker to give a Progressive Web App experience.
 // Credit to Matt Gaunt - https://developers.google.com/web/fundamentals/primers/service-workers/
 
-const CACHE_NAME = 'cache-v9';
+const CACHE_NAME = 'cache-v10';
 const urlsToCache = [
   "/",
   "/projects",
