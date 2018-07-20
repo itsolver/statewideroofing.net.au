@@ -16,7 +16,7 @@ layout: info-page
     {% endif %}
     {% if site.fax %}
     <h3 class="contact">Fax</h3>
-    <p><a  href="tel:{{ site.fax | prepend: site.phone-country-code | remove: " " }}">{{ site.fax }}</a></p>
+    <p>{{ site.fax }}</p>
     {% endif %}
     {% if site.mailing-address %}
 		<h3 class="contact">Mailing address</h3>
