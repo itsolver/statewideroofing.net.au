@@ -14,6 +14,7 @@ cache:
 env:
   global:
   - NOKOGIRI_USE_SYSTEM_LIBRARIES=true
+  - secure: "J/xy9XzBROLBIC1XvcpR7O4Ex0SBbGsorlx4UfQFu4cRdHS1/dIIfl/qNiUoBrzu4tp3EKmE9pUPSdUnJAGjJ5LZEOsxJJqygpvCAtNzxVs20W426QLw2rwVcghWQQwjHnJfN4dGioNPLndJXtnCeFkU1ZZAwr+aURId7vMNBR+qV0+RPagXrIVdRFYSFAJU4Ct7gObFafyuZtQWl/cS8NFG6NpAdgXjHOU50obgtGEvCsLoifqowuli2rL2OIeHOUsJ4VpNpfkvmaODBBzSfuZoJ0MwXu1xalrQzWv/fS9GMvaz2y144uzHPBl0IWhwF9V4362PRgzz1kA62PnN0ONUixGa/Z8p18gG+2U71uDSczaLpIZPZsigbA2G/b2v36ZQ5sHF/iBCXrlD5JO+dVCtHvSf4xZoFO85zaNMrdrRDklPCdwKEaCYqR26Yob7MFn56sI47ExV39GkknLM3TVFaeJ5+rYamH7amXMn2VfmAyFIqmy12KMPFO9bsfxNkmA/63oLswJeVi/PfboW/7FmfQQgcWB7CuBOTBeE7LW8u9lDHFvkHpjAzTox6FVRZ4gnHcpIQBF7iJ8hzAUnz4yfdfdQBYBEJjdy9xZ/xeBRncZazp9gccz5T8WKD7YNQRQQciM0JwqgDEez9FGoCm/7rSeChPGkISn0c3ocXTA="
 notifications:
   email:
     on_success: never
@@ -28,15 +29,12 @@ before_install:
 - gem update --system
 - gem install bundler
 install:
+- npm install -g firebase-tools
+- firebase use statewideroofing-86d6c --token "$FIREBASE_API_TOKEN"
 - npm install -g gulp-cli
 - npm install
 - bundle install
 script: travis_retry gulp build --prod
-deploy:
-  provider: firebase
-  skip_cleanup: true
-  token:
-    secure: AhxKm/JQ99BMi67dhf/F/+HIbPWUbV3BS7iYwOPMg8ze3kTRYfZU0g8NjJNh+Eb3vb/JDpyigayFrjxtnSksYU/CYs7AAOTbe8EQbwpHzODPww036mqgamwWGfgTc8g5bkDtHZxLkWGgky6fo2Q7MccKVeK0T6/nD0lCILctqpUWBbUFuWLaVUC8SZBqIcLI5fJBlc5oi4rJ7IWkXQ710RRG9NZe9O4jMwgEDR+pfmVHRsMYqG0hSUdacSghqH2dL5dLA7iml1ZcBL1d+4J1doYIMR6ZdloyNaa5y8I/MlVA+LvaK6IlhPsBSgFB0XnWXN7GgQMTesSBYLZ1pV2aKh1lxrFCtIuRgqQ849T1KfVF0kzmVISlv1w9EcCbmKMOz/yY8MPa36izb3b6ezlhNU+RczM08/mUy1b0HXEDfDnTtA1rVL1DoS4HkO8fhqFKivYSQK1iOwrJZb8br2DBF+Yxeq/m8aIhg99H8lwTw19BusGYx86WqrkQkAuEM6+Zw2cvkdedKLHIXakhHHiFoK9kgriQ3Bd5DQHQG4XPl3XLswl9aafdGOfKc0IPily1omI/T5QCWD30ss/vrtmt4vqEo/zF+1xaHT7QQaMgCzMbHEi9NJXP/dTpzURIBLqD1p9VBgZZox4ie7gNV1Xzyl1nOMSf6ff6gaG48jzHRyo=
-    project: statewideroofing-86d6c
-after_deploy:
+after_success:
+- firebase --non-interactive deploy --token "$FIREBASE_API_TOKEN"
 - gulp submit
