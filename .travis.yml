@@ -36,7 +36,7 @@ deploy:
   provider: firebase
   skip_cleanup: true
   token:
-    secure: 1/gXv4_MWz4DUHzo05irUjoVBBHCqy5gbsXGrDj2adyejlgDSpM04k0Ag8oIEGdlx7
+    secure: "bHQAn+yFXn2OIUZklrYhSBA541/OstxVE2EBhcmxodUK0IL8WYM7T1m3WSyk2PGkWKFyBZNXUlmib9mCjAYcP6HgcTSU/mvmCtgpnu+gPjJV1lOAnFA4J9/Ukj05V9H1GBxrcyJxhrr4n2esDk6tztQrwpqw/ic0qZiuZuW0VNotnHw8XY+fPzBaSDd++AVXFASoiQVfuVco3VwWvIczCRRvSgJY9iREoGOvyZmzMpKtxGhL3vU5cAem8YVNtiuK59CXhyLfebJu+6PD+kLqQtPSMqt/0RT0qoICONcMXOmN4XOwYNRePZZ5oiVj6/LLL4WPqewHO5ZVmpYBUFIFjs4DmFJlEhH2aUWObd/0GbdbD1/DWCw7gp4V66vlc596l0E3ru7Y5AHgfMKmqmPBusWLQbujxq5oOnlDcuyO5NCPhYnZHLATnIGmSKLVrHraSZ7EEicHhiYIHYcri+qn/ieTj4TufBQu7hF63nOiJ62JHidpkVc4NBnlcLoMFw4ydRNWRnaShiSZeyaXh7l5o6pNWpDkuhbug+krsQjXfxeWwOUx+zh4fyLzZRgI+vNv2HiLVD1d/+j5EFpq70NtAr8bJyvlkK2s3dfGkGd+uTrBzXFMBZfD6t3Thg4BVEzOZ3I9gyeL5dJAGtFwtSohIzw+mj/vVTYuf/DBK+N3GK4="
   project: statewideroofing-86d6c
 after_deploy:
 - gulp submit
