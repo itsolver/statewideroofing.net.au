@@ -7,6 +7,7 @@ var cssnano = require('gulp-cssnano');
 var gulp = require('gulp');
 var newer = require('gulp-newer');
 var postcss = require('gulp-postcss');
+var rev = require('gul-rev');
 var sass = require('gulp-sass');
 var size = require('gulp-size');
 var sourcemaps = require('gulp-sourcemaps');
