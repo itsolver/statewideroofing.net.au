@@ -32,7 +32,7 @@
     "gulp-postcss": "^8.0.0",
     "gulp-pretty-data": "^0.1.2",
     "gulp-responsive": "^2.14.0",
-    "gul-rev": "^9.0.0",
+    "gulp-rev": "^9.0.0",
     "gulp-sass": "^4.0.2",
     "gulp-shell": "^0.7.1",
     "gulp-size": "^3.0.0",
