@@ -1,7 +1,6 @@
 'use strict';
 var changed     = require('gulp-changed');
 var gulp        = require('gulp');
-var rename      = require('gulp-rename');
 var responsive  = require('gulp-responsive');
 var size        = require('gulp-size');
 var imagemin    = require('gulp-imagemin');
