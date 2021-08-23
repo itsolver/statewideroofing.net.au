@@ -18,12 +18,11 @@ future: false # Publish on schedule future dated posts https://stackoverflow.com
 # ----
 # Business profile
 short-name: "SWR"
-QBCC: "111 8722"
-ABN: "80 169 475 912"
+QBCC: "15248322"
+ABN: "31 641 936 709"
 email: "info@statewideroofing.net.au"
 # Include area code
 phone: "1300 784 231"
-fax: "07 3177 1032"
 # Update country code for tel: links
 phone-country-code: "61"
 mailing-address: P.O. Box 7456, Loganholme QLD 4129
