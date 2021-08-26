@@ -17,7 +17,7 @@ env:
   - secure: "J/xy9XzBROLBIC1XvcpR7O4Ex0SBbGsorlx4UfQFu4cRdHS1/dIIfl/qNiUoBrzu4tp3EKmE9pUPSdUnJAGjJ5LZEOsxJJqygpvCAtNzxVs20W426QLw2rwVcghWQQwjHnJfN4dGioNPLndJXtnCeFkU1ZZAwr+aURId7vMNBR+qV0+RPagXrIVdRFYSFAJU4Ct7gObFafyuZtQWl/cS8NFG6NpAdgXjHOU50obgtGEvCsLoifqowuli2rL2OIeHOUsJ4VpNpfkvmaODBBzSfuZoJ0MwXu1xalrQzWv/fS9GMvaz2y144uzHPBl0IWhwF9V4362PRgzz1kA62PnN0ONUixGa/Z8p18gG+2U71uDSczaLpIZPZsigbA2G/b2v36ZQ5sHF/iBCXrlD5JO+dVCtHvSf4xZoFO85zaNMrdrRDklPCdwKEaCYqR26Yob7MFn56sI47ExV39GkknLM3TVFaeJ5+rYamH7amXMn2VfmAyFIqmy12KMPFO9bsfxNkmA/63oLswJeVi/PfboW/7FmfQQgcWB7CuBOTBeE7LW8u9lDHFvkHpjAzTox6FVRZ4gnHcpIQBF7iJ8hzAUnz4yfdfdQBYBEJjdy9xZ/xeBRncZazp9gccz5T8WKD7YNQRQQciM0JwqgDEez9FGoCm/7rSeChPGkISn0c3ocXTA="
 notifications:
   email:
-    on_success: never
+    on_success: change
     on_failure: change
   pushover:
     api_key:
@@ -25,6 +25,7 @@ notifications:
     users:
       secure: NmnPQlide6W/7DbUzIrOlPZNfvIZ/zBgJC3GXHKZzr8XflVYw0OG0P4WEovNcrZ9Y8EKC+1XobK6Eq2WjLVDLpseP50Dnu0JcN2uUkXNqQnzmjXWoGT8ymgBYkijLWGEFk2+j8zTq1TJvrQSkes9JUOPn8PXM8jev9VvSQbvga1S6xW106YyC+HcDeaYvXGCh65MeF9JH8URHoQpyf3xp1JeRGuiDUHoS+fbbJUUlqf04xeTlxOzvhpDcnvpU8lwQKfYfKoZPcNCjY9plEYOS9oQKTeClQzJzUs2N8N2bUlSg94eCJ3hiAz7yHG5h+E/GF24/Sz0bKRszlAhYzupv4uaBAfW2Dd+YakOGORb2nePhNXJW9Y/BKc7JXRnWoF6DkMpMoarakegctR/H3uSCRGMAv5hLAZx64sn6y4mDfZyyUQbZao/9B669vzoS4ioRsXZYn7KL09E0RxMMrZSvwnkY8UkpNPROiv7f9664iAV/L0Hlq3aZD4HcdNfMQauyGayP649q5R+dlvdFXcP+PU1tjYHAPmWQ8Lo8KfvgJ0W6SM5Ex+wptssOmP+ma+vRj6NKzN8VkeExW4AwgRtSW+ckJlS0HMdt2kBp6RslcrPDwzK8y6lRrhSlEnW4+I5jgODMJ5q0o8mwuyYjw3k6b0Dt5QD0Z25gusiUKeZKBM=
 before_install:
+- nvm install 14.17.5
 - nvm use 14.17.5
 - gem update --system
 - gem install bundler
