@@ -1,4 +1,5 @@
 language: ruby
+node_js: lts/*
 rvm:
 - 2.4.1
 dist: trusty
