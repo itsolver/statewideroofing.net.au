@@ -36,7 +36,6 @@ install:
 - firebase use "$FIREBASE_PROJECT" --token "$FIREBASE_TOKEN"
 - npm install
 - bundle install
-- snyk test
 script:
 - travis_retry gulp build --prod
 after_success:
