@@ -1,14 +1,13 @@
-language: ruby
-rvm:
-- 2.6
-dist: trusty
-sudo: required
 branches:
   only:
-  - master
+  - "/.*/"
+language: ruby
+rvm:
+- 2.5.3
+dist: xenial
+node_js: 12.13.1
 cache:
   bundler: true
-  yarn: true
   directories:
   - node_modules
 env:
@@ -25,17 +24,21 @@ notifications:
     users:
       secure: NmnPQlide6W/7DbUzIrOlPZNfvIZ/zBgJC3GXHKZzr8XflVYw0OG0P4WEovNcrZ9Y8EKC+1XobK6Eq2WjLVDLpseP50Dnu0JcN2uUkXNqQnzmjXWoGT8ymgBYkijLWGEFk2+j8zTq1TJvrQSkes9JUOPn8PXM8jev9VvSQbvga1S6xW106YyC+HcDeaYvXGCh65MeF9JH8URHoQpyf3xp1JeRGuiDUHoS+fbbJUUlqf04xeTlxOzvhpDcnvpU8lwQKfYfKoZPcNCjY9plEYOS9oQKTeClQzJzUs2N8N2bUlSg94eCJ3hiAz7yHG5h+E/GF24/Sz0bKRszlAhYzupv4uaBAfW2Dd+YakOGORb2nePhNXJW9Y/BKc7JXRnWoF6DkMpMoarakegctR/H3uSCRGMAv5hLAZx64sn6y4mDfZyyUQbZao/9B669vzoS4ioRsXZYn7KL09E0RxMMrZSvwnkY8UkpNPROiv7f9664iAV/L0Hlq3aZD4HcdNfMQauyGayP649q5R+dlvdFXcP+PU1tjYHAPmWQ8Lo8KfvgJ0W6SM5Ex+wptssOmP+ma+vRj6NKzN8VkeExW4AwgRtSW+ckJlS0HMdt2kBp6RslcrPDwzK8y6lRrhSlEnW4+I5jgODMJ5q0o8mwuyYjw3k6b0Dt5QD0Z25gusiUKeZKBM=
 before_install:
-- nvm install 14.17.5
-- nvm use 14.17.5
+- nvm install 12.13.1
+- nvm use 12.13.1
 - gem update --system
+- gem update bundler
 - gem install bundler
 install:
 - npm install -g firebase-tools
-- firebase use statewideroofing-86d6c --token "$FIREBASE_API_TOKEN"
 - npm install -g gulp-cli
+- npm install -g snyk
+- firebase use "$FIREBASE_PROJECT" --token "$FIREBASE_TOKEN"
 - npm install
 - bundle install
-script: travis_retry gulp build --prod
+- snyk test
+script:
+- travis_retry gulp build --prod
 after_success:
-- firebase --non-interactive deploy --token "$FIREBASE_API_TOKEN"
+- firebase --non-interactive deploy --token "$FIREBASE_TOKEN"
 - gulp submit
