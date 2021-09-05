@@ -13,7 +13,7 @@ gulp.task('images:optimize', () => {
   return gulp.src([paths.imageFilesGlob])
     .pipe(imagemin([
       imagemin.gifsicle({interlaced: true}),
-      imagemin.jpegtran({progressive: true}),
+      imagemin.mozjpeg({progressive: true}),
       imagemin.optipng(),
       imagemin.svgo({plugins: [{cleanupIDs: false}]})
     ], {verbose: true}))
